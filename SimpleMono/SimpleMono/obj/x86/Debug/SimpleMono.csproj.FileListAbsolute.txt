@@ -1,7 +1,10 @@
+C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\SDL.dll
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\SimpleMono.exe
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\SimpleMono.pdb
+C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\Lidgren.Network.dll
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\MonoGame.Framework.dll
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\bin\WindowsGL\Debug\Tao.Sdl.dll
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\obj\x86\Debug\SimpleMono.csprojResolveAssemblyReference.cache
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\obj\x86\Debug\SimpleMono.exe
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\SimpleMono\SimpleMono\obj\x86\Debug\SimpleMono.pdb

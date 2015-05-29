@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMono", "SimpleMono\SimpleMono.csproj", "{8400AA74-3300-4263-AF64-A83E9DAF5943}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMono", "SimpleMono\SimpleMono.csproj", "{CFA36E1E-B3F4-4573-A0CD-039A0128C314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8400AA74-3300-4263-AF64-A83E9DAF5943}.Debug|x86.ActiveCfg = Debug|x86
-		{8400AA74-3300-4263-AF64-A83E9DAF5943}.Debug|x86.Build.0 = Debug|x86
-		{8400AA74-3300-4263-AF64-A83E9DAF5943}.Release|x86.ActiveCfg = Release|x86
-		{8400AA74-3300-4263-AF64-A83E9DAF5943}.Release|x86.Build.0 = Release|x86
+		{CFA36E1E-B3F4-4573-A0CD-039A0128C314}.Debug|x86.ActiveCfg = Debug|x86
+		{CFA36E1E-B3F4-4573-A0CD-039A0128C314}.Debug|x86.Build.0 = Debug|x86
+		{CFA36E1E-B3F4-4573-A0CD-039A0128C314}.Release|x86.ActiveCfg = Release|x86
+		{CFA36E1E-B3F4-4573-A0CD-039A0128C314}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
