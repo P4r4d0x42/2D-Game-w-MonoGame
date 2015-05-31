@@ -17,7 +17,14 @@ namespace DrawAndControl
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        SpriteBatch mSpriteBatch;
+
+        private Texture2D mJPGImage;  // The UWB-JPG
+        private Vector2 mJPGPosition;  // Top-Left pixel pos of mJPGImage
+
+        private Texture2D mPNGImage; // PNG
+        private Vector2 mPNGPosition;  // Top-Left most pixel of mPNG
+        
 
         public Game1()
             : base()
@@ -34,7 +41,8 @@ namespace DrawAndControl
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            mJPGPosition = new Vector2(10f, 10f);
+            mPNGPosition = new Vector2(100f, 100f);
 
             base.Initialize();
         }
@@ -46,9 +54,10 @@ namespace DrawAndControl
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            mSpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            mJPGImage = Content.Load<Texture2D>("UWB-JPG");
+            mPNGImage = Content.Load<Texture2D>("UWB-PNG");
         }
 
         /// <summary>
@@ -83,7 +92,13 @@ namespace DrawAndControl
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            mSpriteBatch.Begin(); // Init drawing support
+
+            // Draw images
+            mSpriteBatch.Draw(mJPGImage,mJPGPosition,Color.White);
+            mSpriteBatch.Draw(mPNGImage,mPNGPosition,Color.White);
+
+            mSpriteBatch.End(); // Inform graphics system we are done drawing
 
             base.Draw(gameTime);
         }
