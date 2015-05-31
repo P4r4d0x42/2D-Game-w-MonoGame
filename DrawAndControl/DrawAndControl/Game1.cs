@@ -76,10 +76,60 @@ namespace DrawAndControl
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            #region Game Controller
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            // Update the image positions with left/right thumbsticks
+            mJPGPosition += GamePad.GetState(PlayerIndex.One).ThumbSticks.Left;
+            mPNGPosition += GamePad.GetState(PlayerIndex.One).ThumbSticks.Right;
+            #endregion
+
+            #region Keyboard
+            // Allows the game to exit
+            if(Keyboard.GetState().IsKeyDown(Keys.Escape))
+                this.Exit();
+
+            // Update the image position with Arrow Keys
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+                mJPGPosition.X --;
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                mJPGPosition.X++;
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+                mJPGPosition.Y--;
+            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+                mJPGPosition.Y++;
+
+
+            // Update the png image with wasd
+            if (Keyboard.GetState().IsKeyDown(Keys.A))
+                mPNGPosition.X--;
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+                mPNGPosition.X++;
+            if (Keyboard.GetState().IsKeyDown(Keys.W))
+                mPNGPosition.Y--;
+            if (Keyboard.GetState().IsKeyDown(Keys.S))
+                mPNGPosition.Y++;
+            
+            #endregion
+
+            #region Mouse
+            // Poll mouse state
+            MouseState mMouseState = Mouse.GetState();
+
+            // If left mouse button is pressed move jpg to location click
+            if (mMouseState.LeftButton == ButtonState.Pressed)
+            {
+                mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            }
+
+            // Same deal but with png
+            if (mMouseState.RightButton == ButtonState.Pressed)
+            {
+                mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            }
+
+            #endregion
 
             base.Update(gameTime);
         }
