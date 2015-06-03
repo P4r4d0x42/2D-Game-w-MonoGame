@@ -79,21 +79,84 @@ namespace InputWrapper
 
             return 0f; // If you get here, it's not in use
         }
-        // TODO: Return to page 44 and continue from there
 
 
+        public float Left
+        {
+            get { return GetTriggerState(GamePad.GetState(PlayerIndex.One).Triggers.Left, KLeftTrigger);}
+        }
 
-
-
+        public float Right
+        {
+            get { return GetTriggerState(GamePad.GetState(PlayerIndex.One).Triggers.Right, KRightTrigger); }
+        }
 
     }
 
-
-
-
-    class InputWrapper
+    internal struct AllThumbSticks
     {
+        private const Keys kLeftThumbStickUp = Keys.W;
+        private const Keys kLeftThumbStickDown = Keys.S;
+        private const Keys kLeftThumbStickLeft = Keys.A;
+        private const Keys kLeftThumbStickRight = Keys.D;
+
+        private const Keys kRightThumbStickUp = Keys.Up;
+        private const Keys kRightThumbStickDown = Keys.Down;
+        private const Keys kRightThumbStickLeft = Keys.Left;
+        private const Keys kRightThumbStickRight = Keys.Right;
+
+        private const float kKeyDownValue = 0.75f;
+
+        private Vector2 ThumbStickState(Vector2 thumbStickValue,
+                                Keys up, Keys down, Keys left, Keys right)
+        {
+            Vector2 r = new Vector2(0f, 0f);
+            if ((GamePad.GetState(PlayerIndex.One).IsConnected)) // TODO: See why there are two () here instead of the normal single of an if statement. Is it some sort of formatting convention?
+            {
+                r = thumbStickValue;
+            }
+            if (Keyboard.GetState().IsKeyDown(up)) // checks for keyboard input first and overrides the game pad if found
+                r.Y += kKeyDownValue;
+            if (Keyboard.GetState().IsKeyDown(down)) // checks for keyboard input first and overrides the game pad if found
+                r.Y -= kKeyDownValue;
+            if (Keyboard.GetState().IsKeyDown(left)) // checks for keyboard input first and overrides the game pad if found
+                r.X -= kKeyDownValue;
+            if (Keyboard.GetState().IsKeyDown(right)) // checks for keyboard input first and overrides the game pad if found
+                r.X += kKeyDownValue;
+
+            return r;
+        }
+
+        public Vector2 Left
+        {
+            get { 
+                return ThumbStickState(GamePad.GetState(PlayerIndex.One).ThumbSticks.Left, 
+                kLeftThumbStickUp,kLeftThumbStickDown,
+                kLeftThumbStickLeft,kLeftThumbStickRight); 
+            }
+        }
+
+        public Vector2 Right
+        {
+            get
+            {
+                return ThumbStickState(GamePad.GetState(PlayerIndex.One).ThumbSticks.Right,
+                kRightThumbStickUp, kRightThumbStickDown,
+                kRightThumbStickLeft, kRightThumbStickRight);
+            }
+        }
     }
 
 
+
+
+    static class InputWrapper
+    {
+        static public AllInputButtons Buttons = new AllInputButtons();
+        static public AllThumbSticks ThumbSticks = new AllThumbSticks();
+        static public AllInputTriggers Triggers = new AllInputTriggers();
+    }
+
+
+    // TODO: Left of on step 5 Page 38. Not sure if this is supposed to be in the previous project or it's own. Sort that shit out.
 }
