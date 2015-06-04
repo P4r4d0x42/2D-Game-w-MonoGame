@@ -1,0 +1,12 @@
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\obj\x86\Debug\InputWrapper.csprojResolveAssemblyReference.cache
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\SDL.dll
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\InputWrapper.exe
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\InputWrapper.pdb
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\obj\x86\Debug\InputWrapper.exe
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\obj\x86\Debug\InputWrapper.pdb
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\Content\UWB-JPG.jpg
+C:\Users\paradox\Projects\C#\2D-Game-w-MonoGame\InputWrapper\InputWrapper\bin\WindowsGL\Debug\Content\UWB-PNG.png

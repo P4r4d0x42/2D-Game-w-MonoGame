@@ -17,14 +17,7 @@ namespace InputWrapper
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch mSpriteBatch;
-
-        private Texture2D mJPGImage;  // The UWB-JPG
-        private Vector2 mJPGPosition;  // Top-Left pixel pos of mJPGImage
-
-        private Texture2D mPNGImage; // PNG
-        private Vector2 mPNGPosition;  // Top-Left most pixel of mPNG
-        
+        SpriteBatch spriteBatch;
 
         public Game1()
             : base()
@@ -41,8 +34,7 @@ namespace InputWrapper
         /// </summary>
         protected override void Initialize()
         {
-            mJPGPosition = new Vector2(10f, 10f);
-            mPNGPosition = new Vector2(100f, 100f);
+            // TODO: Add your initialization logic here
 
             base.Initialize();
         }
@@ -54,10 +46,9 @@ namespace InputWrapper
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            mSpriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            mJPGImage = Content.Load<Texture2D>("UWB-JPG");
-            mPNGImage = Content.Load<Texture2D>("UWB-PNG");
+            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
@@ -76,35 +67,10 @@ namespace InputWrapper
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            #region Controlles
-            // Allows the game to exit
-            if (InputWrapper.Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
 
-            // Update the image positions with left/right thumbsticks
-            mJPGPosition += InputWrapper.ThumbSticks.Left;
-            mPNGPosition += InputWrapper.ThumbSticks.Right;
-            
-            
-            #endregion
-
-            #region Mouse // TODO: Add this in the wrapper
-            // Poll mouse state
-            MouseState mMouseState = Mouse.GetState();
-            
-            // If left mouse button is pressed move jpg to location click
-            if (mMouseState.LeftButton == ButtonState.Pressed)
-            {
-                mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            }
-            
-            // Same deal but with png
-            if (mMouseState.RightButton == ButtonState.Pressed)
-            {
-                mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            }
-
-            #endregion
+            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
@@ -117,13 +83,7 @@ namespace InputWrapper
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            mSpriteBatch.Begin(); // Init drawing support
-
-            // Draw images
-            mSpriteBatch.Draw(mJPGImage,mJPGPosition,Color.White);
-            mSpriteBatch.Draw(mPNGImage,mPNGPosition,Color.White);
-
-            mSpriteBatch.End(); // Inform graphics system we are done drawing
+            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }

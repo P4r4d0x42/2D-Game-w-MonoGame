@@ -158,5 +158,5 @@ namespace InputWrapper
     }
 
 
-    // TODO: Left of on step 5 Page 38. Not sure if this is supposed to be in the previous project or it's own. Sort that shit out.
+    // TODO: On to chapter 2. I should review this and move the mouse into the input wrapper and go over the code to make sure it all makes sense.
 }
