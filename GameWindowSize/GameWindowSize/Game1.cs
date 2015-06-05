@@ -19,11 +19,20 @@ namespace GameWindowSize
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        // Prefer window size
+        const int kWindowWidth = 1000;
+        const int kWindowHeight = 700;
+
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+                    // Set preferred window size
+            graphics.PreferredBackBufferWidth = kWindowWidth;
+            graphics.PreferredBackBufferHeight = kWindowHeight;
+
         }
 
         /// <summary>
