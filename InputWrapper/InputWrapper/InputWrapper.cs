@@ -147,7 +147,11 @@ namespace InputWrapper
         }
     }
 
+    internal struct AllInputMouse
+    {
+        //private const MouseState kLeftButton = 
 
+    }
 
 
     static class InputWrapper
