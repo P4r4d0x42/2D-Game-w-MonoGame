@@ -10,3 +10,5 @@ C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\DrawAndControl\DrawAndContr
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\DrawAndControl\DrawAndControl\obj\x86\Debug\DrawAndControl.csprojResolveAssemblyReference.cache
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\DrawAndControl\DrawAndControl\obj\x86\Debug\DrawAndControl.exe
 C:\Users\Paradox\Documents\GitHub\2D-Game-w-MonoGame\DrawAndControl\DrawAndControl\obj\x86\Debug\DrawAndControl.pdb
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\DrawAndControl\DrawAndControl\obj\x86\Debug\DrawAndControl.exe
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\DrawAndControl\DrawAndControl\obj\x86\Debug\DrawAndControl.pdb

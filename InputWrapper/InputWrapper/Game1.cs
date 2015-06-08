@@ -76,7 +76,7 @@ namespace InputWrapper
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            #region Controlles
+            #region Controls
             // Allows the game to exit
             if (InputWrapper.Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -84,25 +84,25 @@ namespace InputWrapper
             // Update the image positions with left/right thumbsticks
             mJPGPosition += InputWrapper.ThumbSticks.Left;
             mPNGPosition += InputWrapper.ThumbSticks.Right;
-            
+
             
             #endregion
 
             #region Mouse // TODO: Add this in the wrapper
-            // Poll mouse state
-            MouseState mMouseState = Mouse.GetState();
+            //// Poll mouse state
+            //MouseState mMouseState = Mouse.GetState();
             
-            // If left mouse button is pressed move jpg to location click
-            if (mMouseState.LeftButton == ButtonState.Pressed)
-            {
-                mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            }
+            ////If left mouse button is pressed move jpg to location click
+            //if (mMouseState.LeftButton == ButtonState.Pressed)
+            //{
+            //    mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            //}
             
-            // Same deal but with png
-            if (mMouseState.RightButton == ButtonState.Pressed)
-            {
-                mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            }
+            //// Same deal but with png
+            //if (mMouseState.RightButton == ButtonState.Pressed)
+            //{
+            //    mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            //}
 
             #endregion
 

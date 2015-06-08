@@ -149,7 +149,52 @@ namespace InputWrapper
 
     internal struct AllInputMouse
     {
-        //private const MouseState kLeftButton = 
+        private const ButtonState kLeftButton = ButtonState.Pressed;
+
+        private MouseState mMouseState;
+
+        private ButtonState GetState( )
+        {
+            mMouseState = Mouse.GetState();
+
+            if (mMouseState.LeftButton == ButtonState.Pressed)
+            {
+                // mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+                return ButtonState.Pressed;
+            }
+
+            // Same deal but with png
+            if (mMouseState.RightButton == ButtonState.Pressed)
+            {
+                //mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+                return ButtonState.Pressed;
+            }
+
+            return ButtonState.Released;
+        }
+
+        public ButtonState LeftButton
+        {
+            get { return GetState(); }
+        }
+
+        public ButtonState RightButton
+        {
+            get { return GetState(); }
+        }
+
+            // MouseState mMouseState = Mouse.GetState();
+            //// If left mouse button is pressed move jpg to location click
+            //if (mMouseState.LeftButton == ButtonState.Pressed)
+            //{
+            //    mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            //}
+            
+            //// Same deal but with png
+            //if (mMouseState.RightButton == ButtonState.Pressed)
+            //{
+            //    mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+            //}
 
     }
 
@@ -161,6 +206,4 @@ namespace InputWrapper
         static public AllInputTriggers Triggers = new AllInputTriggers();
     }
 
-
-    // TODO: On to chapter 2. I should review this and move the mouse into the input wrapper and go over the code to make sure it all makes sense.
 }
