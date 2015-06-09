@@ -88,7 +88,7 @@ namespace InputWrapper
             
             #endregion
 
-            #region Mouse // TODO: Add this in the wrapper
+            #region Mouse (Should be implemented in the InputWrapper.cs)
             //// Poll mouse state
             //MouseState mMouseState = Mouse.GetState();
             

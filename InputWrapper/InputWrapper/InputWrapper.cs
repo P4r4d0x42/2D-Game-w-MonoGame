@@ -93,6 +93,7 @@ namespace InputWrapper
 
     }
 
+    // TODO: Get this working
     internal struct AllThumbSticks
     {
         private const Keys kLeftThumbStickUp = Keys.W;
