@@ -197,6 +197,8 @@ namespace InputWrapper
             //    mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
             //}
 
+
+    // Just got this up and running inside of vmware fusion. 
     }
 
 
