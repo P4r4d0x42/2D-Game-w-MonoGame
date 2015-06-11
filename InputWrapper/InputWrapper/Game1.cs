@@ -81,39 +81,26 @@ namespace InputWrapper
             if (InputWrapper.Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // Update the image positions with left/right thumbsticks
-            mJPGPosition += InputWrapper.ThumbSticks.Left;
-            mPNGPosition += InputWrapper.ThumbSticks.Right;
-
+            // Handles right and left Mouse clicks
             if (InputWrapper.Mouse.LeftButton == ButtonState.Pressed)
             {
-                mJPGPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+                mJPGPosition = InputWrapper.Mouse.MousePosition;
             }
 
             if (InputWrapper.Mouse.RightButton == ButtonState.Pressed)
             {
-                mPNGPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+                mPNGPosition = InputWrapper.Mouse.MousePosition;
             }
-            #endregion
 
-            #region Mouse (Should be implemented in the InputWrapper.cs)
-            //// Poll mouse state
-            //MouseState mMouseState = Mouse.GetState();
-            
-            ////If left mouse button is pressed move jpg to location click
-            //if (mMouseState.LeftButton == ButtonState.Pressed)
-            //{
-            //    mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            //}
-            
-            //// Same deal but with png
-            //if (mMouseState.RightButton == ButtonState.Pressed)
-            //{
-            //    mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            //}
+
+
+            // Update the image positions with left/right thumb sticks
+            mJPGPosition += InputWrapper.ThumbSticks.Left;
+            mPNGPosition += InputWrapper.ThumbSticks.Right;
 
             #endregion
 
+       
             base.Update(gameTime);
         }
 

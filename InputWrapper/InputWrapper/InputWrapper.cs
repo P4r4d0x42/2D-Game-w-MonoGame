@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace InputWrapper
@@ -147,17 +141,17 @@ namespace InputWrapper
         }
     }
 
-    // TODO: Get this working
     internal struct AllInputMouse
     {
         //private const ButtonState kLeftButton = ButtonState.Pressed;
+        public Vector2 MousePosition { get; private set; }
 
         private ButtonState GetState(ButtonState gameMouseButtonState)
         {
 
-            if (gameMouseButtonState == ButtonState.Pressed)
+            if (gameMouseButtonState == ButtonState.Pressed )
             {
-                // mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
+                MousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);  // Update mouse position in this struct only if  a button is pressed.
                 return ButtonState.Pressed;
             }
 
@@ -173,6 +167,21 @@ namespace InputWrapper
         public ButtonState RightButton
         {
             get { return GetState(Mouse.GetState().RightButton); }
+        }
+
+        public ButtonState MiddleButton
+        {
+            get { return GetState(Mouse.GetState().MiddleButton); }
+        }
+
+        public ButtonState XButton1
+        {
+            get { return GetState(Mouse.GetState().XButton1); }
+        }
+
+        public ButtonState XButton2
+        {
+            get { return GetState(Mouse.GetState().XButton2); }
         }
     }
 
