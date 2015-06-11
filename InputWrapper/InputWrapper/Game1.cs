@@ -85,7 +85,15 @@ namespace InputWrapper
             mJPGPosition += InputWrapper.ThumbSticks.Left;
             mPNGPosition += InputWrapper.ThumbSticks.Right;
 
-            
+            if (InputWrapper.Mouse.LeftButton == ButtonState.Pressed)
+            {
+                mJPGPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            }
+
+            if (InputWrapper.Mouse.RightButton == ButtonState.Pressed)
+            {
+                mPNGPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            }
             #endregion
 
             #region Mouse (Should be implemented in the InputWrapper.cs)

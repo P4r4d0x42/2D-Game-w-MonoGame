@@ -93,7 +93,6 @@ namespace InputWrapper
 
     }
 
-    // TODO: Get this working
     internal struct AllThumbSticks
     {
         private const Keys kLeftThumbStickUp = Keys.W;
@@ -148,57 +147,33 @@ namespace InputWrapper
         }
     }
 
+    // TODO: Get this working
     internal struct AllInputMouse
     {
-        private const ButtonState kLeftButton = ButtonState.Pressed;
+        //private const ButtonState kLeftButton = ButtonState.Pressed;
 
-        private MouseState mMouseState;
-
-        private ButtonState GetState( )
+        private ButtonState GetState(ButtonState gameMouseButtonState)
         {
-            mMouseState = Mouse.GetState();
 
-            if (mMouseState.LeftButton == ButtonState.Pressed)
+            if (gameMouseButtonState == ButtonState.Pressed)
             {
                 // mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
                 return ButtonState.Pressed;
             }
 
-            // Same deal but with png
-            if (mMouseState.RightButton == ButtonState.Pressed)
-            {
-                //mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-                return ButtonState.Pressed;
-            }
 
             return ButtonState.Released;
         }
 
         public ButtonState LeftButton
         {
-            get { return GetState(); }
+            get { return GetState(Mouse.GetState().LeftButton); }
         }
 
         public ButtonState RightButton
         {
-            get { return GetState(); }
+            get { return GetState(Mouse.GetState().RightButton); }
         }
-
-            // MouseState mMouseState = Mouse.GetState();
-            //// If left mouse button is pressed move jpg to location click
-            //if (mMouseState.LeftButton == ButtonState.Pressed)
-            //{
-            //    mJPGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            //}
-            
-            //// Same deal but with png
-            //if (mMouseState.RightButton == ButtonState.Pressed)
-            //{
-            //    mPNGPosition = new Vector2(mMouseState.X, mMouseState.Y);
-            //}
-
-
-    // Just got this up and running inside of vmware fusion. 
     }
 
 
@@ -207,6 +182,7 @@ namespace InputWrapper
         static public AllInputButtons Buttons = new AllInputButtons();
         static public AllThumbSticks ThumbSticks = new AllThumbSticks();
         static public AllInputTriggers Triggers = new AllInputTriggers();
+        static public AllInputMouse Mouse = new AllInputMouse();
     }
 
 }
