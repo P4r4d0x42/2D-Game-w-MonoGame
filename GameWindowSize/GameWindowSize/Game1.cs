@@ -76,10 +76,31 @@ namespace GameWindowSize
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            // Allows game to exit. F1 should also work due to mapping in InputWrapper class
+            if (InputWrapper.Buttons.Back == ButtonState.Pressed)
                 Exit();
 
-            // TODO: Add your update logic here
+            // "A" to toggle to full-screen mode ("k" on keyboard)
+            if (InputWrapper.Buttons.A == ButtonState.Pressed)
+            {
+                if (!graphics.IsFullScreen)
+                {
+                    graphics.IsFullScreen = true;
+                    graphics.ApplyChanges();
+                }
+            }
+
+            // "B" toggles back to window mode ("L" on keyboard)
+            if (InputWrapper.Buttons.B == ButtonState.Pressed)
+            {
+                if (graphics.IsFullScreen)
+                {
+                    graphics.IsFullScreen = false;
+                    graphics.ApplyChanges();
+                }
+            }
+
+           
 
             base.Update(gameTime);
         }

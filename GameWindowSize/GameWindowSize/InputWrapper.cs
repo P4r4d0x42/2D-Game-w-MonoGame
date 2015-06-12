@@ -1,8 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace InputWrapper
-{
     internal struct AllInputButtons
     {
         private const Keys kA_ButtonKey = Keys.K;
@@ -194,4 +192,3 @@ namespace InputWrapper
         static public AllInputMouse Mouse = new AllInputMouse();
     }
 
-}

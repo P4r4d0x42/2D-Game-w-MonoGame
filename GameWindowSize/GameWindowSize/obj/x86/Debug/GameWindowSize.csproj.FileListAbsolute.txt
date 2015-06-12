@@ -1,0 +1,9 @@
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\obj\x86\Debug\GameWindowSize.csprojResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\obj\x86\Debug\GameWindowSize.exe
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\obj\x86\Debug\GameWindowSize.pdb
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\GameWindowSize.exe
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\GameWindowSize\GameWindowSize\bin\WindowsGL\Debug\GameWindowSize.pdb
