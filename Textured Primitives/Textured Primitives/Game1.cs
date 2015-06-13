@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
 #endregion
 
-namespace GameWindowSize
+namespace Textured_Primitives
 {
     /// <summary>
     /// This is the main type for your game

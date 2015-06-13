@@ -1,1 +1,9 @@
 C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\obj\x86\Debug\Textured Primitives.csprojResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\Textured Primitives.exe
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\Textured Primitives.pdb
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\obj\x86\Debug\Textured Primitives.exe
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\obj\x86\Debug\Textured Primitives.pdb
