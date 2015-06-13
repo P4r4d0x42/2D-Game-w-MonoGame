@@ -1,0 +1,1 @@
+C:\Users\Paradox\Documents\Visual Studio 2012\Projects\2D-Game-w-MonoGame\Textured Primitives\Textured Primitives\obj\x86\Debug\Textured Primitives.csprojResolveAssemblyReference.cache
