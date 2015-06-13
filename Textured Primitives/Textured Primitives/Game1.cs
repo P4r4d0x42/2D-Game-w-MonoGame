@@ -16,8 +16,10 @@ namespace Textured_Primitives
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        // Variables that begin with the letter s (for example, sStaticVariable) indicate that they are static.
+        static public SpriteBatch sSpriteBatch;         // Drawing support
+        static public ContentManager sContent;          // Loading textures
+        static public GraphicsDeviceManager sGraphics;  // Current display size
 
         // Prefer window size
         const int kWindowWidth = 1000;
@@ -26,12 +28,12 @@ namespace Textured_Primitives
         public Game1()
             : base()
         {
-            graphics = new GraphicsDeviceManager(this);
+            sGraphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
                     // Set preferred window size
-            graphics.PreferredBackBufferWidth = kWindowWidth;
-            graphics.PreferredBackBufferHeight = kWindowHeight;
+            sGraphics.PreferredBackBufferWidth = kWindowWidth;
+            sGraphics.PreferredBackBufferHeight = kWindowHeight;
 
         }
 
@@ -55,7 +57,7 @@ namespace Textured_Primitives
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            sSpriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
         }
@@ -83,20 +85,20 @@ namespace Textured_Primitives
             // "A" to toggle to full-screen mode ("k" on keyboard)
             if (InputWrapper.Buttons.A == ButtonState.Pressed)
             {
-                if (!graphics.IsFullScreen)
+                if (!sGraphics.IsFullScreen)
                 {
-                    graphics.IsFullScreen = true;
-                    graphics.ApplyChanges();
+                    sGraphics.IsFullScreen = true;
+                    sGraphics.ApplyChanges();
                 }
             }
 
             // "B" toggles back to window mode ("L" on keyboard)
             if (InputWrapper.Buttons.B == ButtonState.Pressed)
             {
-                if (graphics.IsFullScreen)
+                if (sGraphics.IsFullScreen)
                 {
-                    graphics.IsFullScreen = false;
-                    graphics.ApplyChanges();
+                    sGraphics.IsFullScreen = false;
+                    sGraphics.ApplyChanges();
                 }
             }
 
