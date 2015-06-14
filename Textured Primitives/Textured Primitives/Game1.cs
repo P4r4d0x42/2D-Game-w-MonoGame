@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
+using Textured_Primitives.GraphicsSupport;
+
 #endregion
 
 namespace Textured_Primitives
@@ -24,6 +26,12 @@ namespace Textured_Primitives
         // Prefer window size
         const int kWindowWidth = 1000;
         const int kWindowHeight = 700;
+
+        const int kNumObjects = 4;
+        // Work with the TexturedPrimitive class
+        TexturedPrimitive[] mGraphicsObjects; // An array of objects
+        int mCurrentIndex = 0;
+
 
         public Game1()
             : base()
@@ -59,7 +67,8 @@ namespace Textured_Primitives
             // Create a new SpriteBatch, which can be used to draw textures.
             sSpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // TODO: Create a new SpriteBatch, which can be used to draw textures
+
         }
 
         /// <summary>
