@@ -67,8 +67,14 @@ namespace Textured_Primitives
             // Create a new SpriteBatch, which can be used to draw textures.
             sSpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: Create a new SpriteBatch, which can be used to draw textures
-
+            // Create the primitives
+            mGraphicsObjects = new TexturedPrimitive[kNumObjects];
+            mGraphicsObjects[0] = new TexturedPrimitive("UWB-JPG",              // Image file name
+                                                        new Vector2(10,10),     // Position to draw
+                                                        new Vector2(30,30));    // Size to draw
+            mGraphicsObjects[1] = new TexturedPrimitive("UWB-JPG", new Vector2(200, 200), new Vector2(100, 100));
+            mGraphicsObjects[2] = new TexturedPrimitive("UWB-JPG", new Vector2(50, 10), new Vector2(30, 30));
+            mGraphicsObjects[3] = new TexturedPrimitive("UWB-JPG", new Vector2(50, 200), new Vector2(100, 100));
         }
 
         /// <summary>
